@@ -1,0 +1,39 @@
+KUBVERNETES(K8s)
+kubernetes is an open source container orchestration engine for automating deployment,scaling,and mangagement of containerized applications.
+ the open source project is hosted by the cloud native computing foundation.
+
+Kubernetes developed by google.
+
+KUBERNETES ARCHITECTURE
+pod-group of running container.
+
+orchestration-all the images will be running in different ports to run all the images which were running in different port can be made to run in single
+port number by doing orchestration.
+
+in kubernetes architecture we have master and slave,
+MASTER-controller of every slave nodes.
+MASTER CONTAINS FOLLOWING THINGS WHICH ARE USED FOR CONNECTING SLAVE NODES
+	api server-it is the central control point for all interactions with the cluster.
+	scheduler-it is responsible for assigning workloads(pods) to individual worker nodes based on resource requirements.
+	controller-manager-it uns variouus controllers that monitor the cluster state.
+	etcd-it is a distributed key value store used by kubernetes to store cluster state and configuration data.
+SLAVE NODE CONTAINS
+	containers
+	docker 
+	kubectl
+
+MASTER NODE
+	tHE CONTROL PLANE'S COMPONENTS MAKE GLOBAL DECISIONS ABOUT THE CLUSTER AS WELL AS DETECTING AND RESPONDING TO CLUSTER EVENTS
+
+WORKER NODE
+ contains many things some of them are
+	POD - it is basic units of deployment in kubernetes. it is running image in the container,
+	REPLICA SET- it ensures a specified  number of pod replicas are running at all times.
+	DEPLOYMENT- a higher level abstraction that manages and updates a set of replica pods.
+	SERVICE-A service provides a stable network endpoint for accessing a group of pods.
+
+
+KUBERNETES CLUSTER SETUP:
+MINIKUBE:
+	
+

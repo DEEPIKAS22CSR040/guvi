@@ -1,0 +1,43 @@
+dmindeepika@ITP-CC16-29:~$ sudo apt install docker-compose
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  python3-compose python3-docker python3-dockerpty python3-docopt python3-dotenv python3-packaging python3-texttable python3-websocket
+The following NEW packages will be installed:
+  docker-compose python3-compose python3-docker python3-dockerpty python3-docopt python3-dotenv python3-packaging python3-texttable python3-websocket
+0 upgraded, 9 newly installed, 0 to remove and 28 not upgraded.
+
+dmindeepika@ITP-CC16-29:~$ sudo nano docker-compose.yml
+
+dmindeepika@ITP-CC16-29:~$ docker-compose up -d
+Creating network "dmindeepika_default" with the default driver
+Pulling web (nginx:latest)...
+latest: Pulling from library/nginx
+6e909acdb790: Pull complete
+5eaa34f5b9c2: Pull complete
+417c4bccf534: Pull complete
+e7e0ca015e55: Pull complete
+373fe654e984: Pull complete
+97f5c0f51d43: Pull complete
+c22eb46e871a: Pull complete
+
+dmindeepika@ITP-CC16-29:~$ docker exec -it dmindeepika_db_1 /bin/bash
+bash-5.1# mysql -u -root -p
+Enter password:
+ERROR 1045 (28000): Access denied for user '-root'@'localhost' (using password: YES)
+bash-5.1# mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 9.2.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
