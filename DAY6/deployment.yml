@@ -1,0 +1,35 @@
+1. sudo nano deployment
+
+deployment.yml:
+
+{
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: my-deploy
+    labels:
+      name: my-deploy
+  spec:
+    replicas: 4
+    selector:
+      matchLabels:
+        apptype: web-backend
+    strategy:
+      type: RollingUpdate
+    template:
+      metadata:
+        labels:
+          apptype: web-backend
+      spec:
+        containers:
+        - name: my-app
+          image: deepika/simplewebapp:latest
+          ports:
+                - containerPort: 7076
+}
+
+2. kubectl get pod
+3. minikube service my-service
+4. kubectl port-forward svc/my-service 9000:7070
+
+URL : localhost:9000/maven-web-app/
